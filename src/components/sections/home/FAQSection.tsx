@@ -15,16 +15,16 @@ function FAQItem({ faq, index, isOpen, onToggle }: { faq: FAQ; index: number; is
       className="border-b border-kc-white/[0.04] last:border-b-0"
     >
       <button onClick={onToggle} className="w-full py-8 flex items-center justify-between text-left cursor-pointer group">
-        <span className="text-[var(--kc-text-body-xl)] font-heading font-medium text-kc-white pr-8 group-hover:text-kc-gray-300 transition-colors duration-300">
+        <span className="text-lg font-heading font-bold text-kc-white pr-8 group-hover:text-kc-gold transition-colors duration-300">
           {faq.question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="w-6 h-6 flex-shrink-0 text-kc-gray-600 group-hover:text-kc-gray-400 transition-colors"
+          className="w-6 h-6 flex-shrink-0 text-kc-gray-600 group-hover:text-kc-gold transition-colors"
         >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-full h-full">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
         </motion.span>
       </button>
@@ -37,7 +37,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: { faq: FAQ; index: number; is
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-8 text-[var(--kc-text-body)] text-kc-gray-500 leading-relaxed max-w-2xl">
+            <p className="pb-8 text-base font-heading font-medium text-kc-gray-500 leading-relaxed max-w-2xl">
               {faq.answer}
             </p>
           </motion.div>
@@ -55,7 +55,7 @@ export function FAQSection() {
       <div className="kc-divider absolute top-0 left-8 right-8" />
 
       <div className="kc-container">
-        <div className="kc-grid">
+        <div className="kc-grid gap-20">
           <div className="lg:col-span-5 col-span-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -70,8 +70,8 @@ export function FAQSection() {
                 <br />
                 <span className="kc-gold-text">Questions.</span>
               </h2>
-              <p className="text-[var(--kc-text-body)] text-kc-gray-600 leading-relaxed mt-8 max-w-sm">
-                Still have questions? <a href="/contact" className="text-kc-white hover:text-kc-gold transition-colors">Contact us</a> and we&apos;ll get back to you within 24 hours.
+              <p className="text-base font-heading font-medium text-kc-gray-600 leading-relaxed mt-8 max-w-sm">
+                Still have questions? <a href="/contact" className="text-kc-white font-bold hover:text-kc-gold transition-colors">Contact us</a> and we&apos;ll get back to you within 24 hours.
               </p>
             </motion.div>
           </div>

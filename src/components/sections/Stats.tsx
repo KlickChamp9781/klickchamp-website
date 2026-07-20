@@ -12,8 +12,8 @@ type StatsProps = {
 
 export function Stats({ stats, className }: StatsProps) {
   return (
-    <section className={cn("relative", className)}>
-      <div className="kc-container" style={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
+    <section className={cn("relative bg-kc-black-pure", className)}>
+      <div className="kc-container" style={{ paddingTop: "6rem", paddingBottom: "6rem" }}>
         <div className="kc-grid">
           {stats.map((stat, index) => (
             <motion.div
@@ -24,14 +24,14 @@ export function Stats({ stats, className }: StatsProps) {
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
               className="text-center lg:col-span-3 col-span-6"
             >
-              <div className="text-[var(--kc-text-display)] font-display kc-gold-text mb-4">
+              <div className="text-[var(--kc-text-display)] font-heading font-bold text-kc-white leading-none mb-4">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
               </div>
-              <h3 className="text-[var(--kc-text-h4)] font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-4">
+              <h3 className="text-xl font-heading font-bold text-kc-gray-300 mb-3">
                 {stat.label}
               </h3>
               {stat.description && (
-                <p className="text-[var(--kc-text-body-sm)] text-kc-gray-500">{stat.description}</p>
+                <p className="text-sm text-kc-gray-600 font-heading font-medium">{stat.description}</p>
               )}
             </motion.div>
           ))}

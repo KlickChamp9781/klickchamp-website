@@ -33,7 +33,7 @@ export function CaseStudies() {
           </h2>
         </motion.div>
 
-        <div className="space-y-24">
+        <div className="space-y-32">
           {CASE_STUDIES.map((study, index) => (
             <motion.div
               key={study.id}
@@ -43,11 +43,10 @@ export function CaseStudies() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: index * 0.12 }}
               className="group"
             >
-              {/* Preview image area */}
-              <div className="relative h-64 md:h-80 rounded-[var(--kc-radius-xl)] overflow-hidden bg-gradient-to-br from-kc-black-elevated to-kc-black-pure border border-kc-white/[0.04] mb-12">
+              <div className="relative h-64 md:h-80 rounded-[var(--kc-radius-xl)] overflow-hidden bg-gradient-to-br from-kc-black-elevated to-kc-black-pure border border-kc-white/[0.04] mb-14">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,_var(--kc-gold)_0%,_transparent_60%)] opacity-[0.02]" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-[clamp(5rem,12vw,10rem)] font-display text-kc-white/[0.03] select-none">
+                  <span className="text-[clamp(5rem,12vw,10rem)] font-heading font-bold text-kc-white/[0.02] select-none">
                     {logos[study.client] || study.client.split(" ").map((w: string) => w[0]).join("")}
                   </span>
                 </div>
@@ -60,25 +59,24 @@ export function CaseStudies() {
                     </span>
                   </div>
                   <div>
-                    <p className="text-lg font-heading font-semibold text-kc-white">{study.client}</p>
-                    <p className="text-sm text-kc-gray-500">{study.industry}</p>
+                    <p className="text-lg font-heading font-bold text-kc-white">{study.client}</p>
+                    <p className="text-sm font-heading font-medium text-kc-gray-500">{study.industry}</p>
                   </div>
                 </div>
 
                 <div className="absolute top-8 right-8">
-                  <span className="px-4 py-1.5 text-xs font-heading font-medium text-kc-gray-400 border border-kc-white/[0.06] rounded-full">
+                  <span className="px-4 py-1.5 text-xs font-heading font-bold text-kc-gray-400 border border-kc-white/[0.06] rounded-full">
                     {study.service}
                   </span>
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="kc-grid gap-12">
+              <div className="kc-grid gap-14">
                 <div className="lg:col-span-7 col-span-12">
                   <h3 className="text-[var(--kc-text-h2)] font-heading font-bold text-kc-white leading-[var(--kc-leading-tight)] mb-6">
                     {study.title}
                   </h3>
-                  <p className="text-[var(--kc-text-body-lg)] text-kc-gray-500 leading-relaxed">
+                  <p className="text-lg font-heading font-medium text-kc-gray-500 leading-relaxed">
                     {study.description}
                   </p>
                 </div>
@@ -86,8 +84,8 @@ export function CaseStudies() {
                   <div className="grid grid-cols-3 lg:grid-cols-1 gap-10">
                     {study.results.map((result) => (
                       <div key={result.metric}>
-                        <p className="text-4xl md:text-5xl font-display text-kc-white font-bold leading-none mb-2">{result.value}</p>
-                        <p className="text-xs uppercase tracking-[0.2em] text-kc-gray-600 font-heading font-medium">{result.metric}</p>
+                        <p className="text-4xl md:text-5xl font-heading font-bold text-kc-white leading-none mb-3">{result.value}</p>
+                        <p className="text-xs uppercase tracking-[0.2em] text-kc-gray-600 font-heading font-bold">{result.metric}</p>
                       </div>
                     ))}
                   </div>
@@ -95,11 +93,11 @@ export function CaseStudies() {
               </div>
 
               {study.testimonial && (
-                <div className="mt-10 pt-8 border-t border-kc-white/[0.04]">
-                  <p className="text-[var(--kc-text-body)] text-kc-gray-500 italic leading-relaxed max-w-2xl">
+                <div className="mt-14 pt-10 border-t border-kc-white/[0.04]">
+                  <p className="text-lg font-heading font-medium text-kc-gray-500 italic leading-relaxed max-w-2xl">
                     &ldquo;{study.testimonial}&rdquo;
                   </p>
-                  <p className="text-sm text-kc-gray-600 mt-3 font-heading">— {study.author}</p>
+                  <p className="text-sm font-heading font-bold text-kc-gray-600 mt-3">— {study.author}</p>
                 </div>
               )}
             </motion.div>
@@ -111,7 +109,7 @@ export function CaseStudies() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="mt-20 text-center"
+          className="mt-24 text-center"
         >
           <Button href="/testimonials" variant="outline" size="lg">
             View All Case Studies

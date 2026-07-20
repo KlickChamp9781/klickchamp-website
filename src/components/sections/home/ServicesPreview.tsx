@@ -31,7 +31,7 @@ export function ServicesPreview() {
           </h2>
         </motion.div>
 
-        <div className="kc-grid">
+        <div className="kc-grid gap-12">
           {services.map((service, index) => (
             <motion.div
               key={service.slug}
@@ -43,21 +43,21 @@ export function ServicesPreview() {
             >
               <a
                 href={`/services/${service.slug}`}
-                className="block relative h-full border-b border-kc-white/[0.04] pb-12 group-hover:border-kc-gold/20 transition-colors duration-500"
+                className="block relative h-full border-b border-kc-white/[0.04] pb-14 group-hover:border-kc-gold/20 transition-colors duration-500"
               >
-                <span className="text-7xl md:text-8xl font-display text-kc-white/[0.03] leading-none block mb-8 select-none group-hover:text-kc-gold/[0.06] transition-colors duration-500">
+                <span className="text-6xl font-heading font-bold text-kc-white/[0.04] leading-none block mb-10 select-none group-hover:text-kc-gold/[0.08] transition-colors duration-500">
                   {numbers[index]}
                 </span>
-                <h3 className="text-[var(--kc-text-h3)] font-heading font-bold text-kc-white mb-4 group-hover:text-kc-gold transition-colors duration-500">
+                <h3 className="text-2xl font-heading font-bold text-kc-white mb-4 group-hover:text-kc-gold transition-colors duration-500">
                   {service.shortTitle}
                 </h3>
-                <p className="text-[var(--kc-text-body)] text-kc-gray-500 leading-relaxed">
+                <p className="text-base text-kc-gray-500 leading-relaxed font-heading font-medium">
                   {service.description}
                 </p>
-                <div className="mt-8 flex items-center gap-2 text-kc-gray-600 group-hover:text-kc-gold transition-all duration-500">
-                  <span className="text-xs font-heading font-medium uppercase tracking-[0.2em]">Learn More</span>
+                <div className="mt-10 flex items-center gap-2 text-kc-gray-600 group-hover:text-kc-gold transition-all duration-500">
+                  <span className="text-xs font-heading font-bold uppercase tracking-[0.2em]">Learn More</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </div>
               </a>
@@ -70,7 +70,7 @@ export function ServicesPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="mt-20 text-center"
+          className="mt-24 text-center"
         >
           <Button href="/services" variant="outline" size="lg">
             View All Services
