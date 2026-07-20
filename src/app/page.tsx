@@ -1,4 +1,16 @@
 import type { Metadata } from "next";
+import {
+  Hero,
+  ServicesPreview,
+  WhyChooseUs,
+  Process,
+  CaseStudies,
+  Testimonials,
+  FAQSection,
+  FinalCTA,
+} from "@/components/sections/home";
+import { Stats } from "@/components/sections/Stats";
+import { HOME_STATS } from "@/constants/home";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -18,17 +30,15 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
-      {/* Phase 2: Build sections here */}
-      <section className="kc-section">
-        <div className="kc-container">
-          <p className="text-overline kc-gold-text">Premium Digital Growth</p>
-          <h1 className="text-hero font-display mt-4">
-            We Build Digital
-            <br />
-            Empires.
-          </h1>
-        </div>
-      </section>
+      <Hero />
+      <Stats stats={HOME_STATS} className="border-y border-kc-white/5" />
+      <ServicesPreview />
+      <WhyChooseUs />
+      <Process />
+      <CaseStudies />
+      <Testimonials />
+      <FAQSection />
+      <FinalCTA />
     </main>
   );
 }

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://klickchamp.com"),
@@ -80,7 +83,10 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-kc-black text-kc-white antialiased">
+        <Navbar />
         {children}
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
