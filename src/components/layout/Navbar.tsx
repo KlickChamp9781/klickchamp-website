@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
-import { NAVIGATION, SITE_CONFIG } from "@/constants/site";
+import { NAVIGATION } from "@/constants/site";
 import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
@@ -33,24 +33,22 @@ export function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-[var(--kc-z-sticky)] transition-all duration-500",
+          "fixed top-0 left-0 right-0 z-[var(--kc-z-sticky)] transition-all duration-700",
           isScrolled
-            ? "bg-kc-black/80 backdrop-blur-xl border-b border-kc-white/5 py-3"
-            : "bg-transparent py-5"
+            ? "bg-kc-black/70 backdrop-blur-2xl border-b border-kc-white/5 py-3"
+            : "bg-transparent py-6"
         )}
       >
         <div className="kc-container flex items-center justify-between">
-          {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-[var(--kc-radius-sm)] bg-kc-gold flex items-center justify-center">
-              <span className="text-kc-black font-bold text-sm font-[family-name:var(--kc-font-heading)]">K</span>
+          <a href="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-[var(--kc-radius-md)] bg-kc-gold flex items-center justify-center group-hover:shadow-[var(--kc-shadow-gold-lg)] transition-shadow duration-500">
+              <span className="text-kc-black font-bold text-base font-[family-name:var(--kc-font-heading)]">K</span>
             </div>
-            <span className="text-2xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white">
+            <span className="text-[var(--kc-text-h4)] font-[family-name:var(--kc-font-heading)] font-bold text-kc-white">
               Klick<span className="kc-gold-text">Champ</span>
             </span>
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {(NAVIGATION.main as unknown as Array<{ label: string; href: string; children?: Array<{ label: string; href: string }> }>).map((item) => (
               <div
@@ -61,7 +59,7 @@ export function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="px-4 py-2 text-base font-[family-name:var(--kc-font-heading)] font-medium text-kc-gray-300 hover:text-kc-white transition-colors duration-300 rounded-[var(--kc-radius-sm)] hover:bg-kc-white/5"
+                  className="px-5 py-2.5 text-[var(--kc-text-body-sm)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-gray-400 hover:text-kc-white transition-colors duration-300 rounded-[var(--kc-radius-sm)] hover:bg-kc-white/5"
                 >
                   {item.label}
                 </a>
@@ -78,7 +76,7 @@ export function Navbar() {
                         <a
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-base text-kc-gray-300 hover:text-kc-white hover:bg-kc-white/5 rounded-[var(--kc-radius-sm)] transition-colors duration-200"
+                          className="block px-4 py-2.5 text-[var(--kc-text-body-sm)] text-kc-gray-300 hover:text-kc-white hover:bg-kc-white/5 rounded-[var(--kc-radius-sm)] transition-colors duration-200"
                         >
                           {child.label}
                         </a>
@@ -90,7 +88,6 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Button href="/contact" variant="primary" size="sm" className="hidden lg:inline-flex">
               Get a Quote
@@ -98,47 +95,46 @@ export function Navbar() {
 
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 cursor-pointer"
+              className="lg:hidden w-12 h-12 flex flex-col items-center justify-center gap-1.5 cursor-pointer"
             >
               <motion.span
-                animate={isMobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                className="w-6 h-px bg-kc-white block"
+                animate={isMobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+                className="w-7 h-[1.5px] bg-kc-white block rounded-full"
               />
               <motion.span
                 animate={isMobileOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-6 h-px bg-kc-white block"
+                className="w-7 h-[1.5px] bg-kc-white block rounded-full"
               />
               <motion.span
-                animate={isMobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                className="w-6 h-px bg-kc-white block"
+                animate={isMobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+                className="w-7 h-[1.5px] bg-kc-white block rounded-full"
               />
             </button>
           </div>
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[var(--kc-z-overlay)] bg-kc-black/95 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-[var(--kc-z-overlay)] bg-kc-black/98 lg:hidden"
           >
-            <div className="kc-container pt-24 pb-8">
-              <nav className="space-y-1">
+            <div className="kc-container pt-28 pb-8 h-full flex flex-col justify-between">
+              <nav className="space-y-2">
                 {NAVIGATION.main.map((item, index) => (
                   <motion.div
                     key={item.label}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
                   >
                     <a
                       href={item.href}
                       onClick={() => setIsMobileOpen(false)}
-                      className="block py-3 text-3xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white hover:text-kc-gold transition-colors"
+                      className="block py-4 text-5xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white hover:text-kc-gold transition-colors"
                     >
                       {item.label}
                     </a>
@@ -146,7 +142,7 @@ export function Navbar() {
                 ))}
               </nav>
               <div className="mt-8">
-                <Button href="/contact" variant="primary" size="lg" className="w-full">
+                <Button href="/contact" variant="primary" size="xl" className="w-full">
                   Get a Quote
                 </Button>
               </div>

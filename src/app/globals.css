@@ -1,20 +1,18 @@
 @import "tailwindcss";
 
 /* ================================================================
-   KLICKCHAMP DESIGN SYSTEM — CSS CUSTOM PROPERTIES
-   Premium Digital Marketing Agency — UI Refinement v2
+   KLICKCHAMP DESIGN SYSTEM — CREATIVE DIRECTOR VISION
+   Editorial Luxury — Awwwards-grade presentation
    ================================================================ */
 
-/* --- COLOR TOKENS --- */
 :root {
-  /* Primary Palette */
+  /* --- COLOR TOKENS --- */
   --kc-gold: #C9A84C;
   --kc-gold-light: #E4D5A0;
   --kc-gold-dark: #A38530;
   --kc-gold-glow: rgba(201, 168, 76, 0.15);
   --kc-gold-glow-strong: rgba(201, 168, 76, 0.35);
 
-  /* Neutrals */
   --kc-black: #0A0A0A;
   --kc-black-pure: #000000;
   --kc-black-card: #111111;
@@ -35,7 +33,6 @@
   --kc-gray-800: #262626;
   --kc-gray-900: #171717;
 
-  /* Semantic Colors */
   --kc-success: #22C55E;
   --kc-error: #EF4444;
   --kc-warning: #F59E0B;
@@ -48,61 +45,58 @@
   --kc-gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
   --kc-gradient-gold-subtle: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.02) 100%);
 
-  /* --- TYPOGRAPHY --- */
+  /* --- TYPOGRAPHY — Luxury Editorial Scale --- */
   --kc-font-display: "Instrument Serif", "Georgia", serif;
   --kc-font-heading: "Satoshi", "Inter", sans-serif;
   --kc-font-body: "Inter", "Helvetica Neue", sans-serif;
   --kc-font-mono: "JetBrains Mono", monospace;
 
-  /* Font Sizes — Premium Editorial Scale */
-  --kc-text-hero: clamp(3.5rem, 7.5vw, 7rem);
+  --kc-text-hero: clamp(3.5rem, 8vw, 7.5rem);
+  --kc-text-hero-mono: clamp(6rem, 15vw, 14rem);
   --kc-text-display: clamp(2.5rem, 5vw, 4.5rem);
   --kc-text-h1: clamp(2rem, 4vw, 3.25rem);
-  --kc-text-h2: clamp(2rem, 4vw, 3.5rem);
-  --kc-text-h3: clamp(1.35rem, 2vw, 1.75rem);
-  --kc-text-h4: clamp(1.15rem, 1.5vw, 1.35rem);
-  --kc-text-body-xl: 1.25rem;
-  --kc-text-body-lg: 1.125rem;
-  --kc-text-body: 1.125rem;
+  --kc-text-h2: clamp(2.25rem, 4.5vw, 4rem);
+  --kc-text-h3: clamp(1.5rem, 2.5vw, 2rem);
+  --kc-text-h4: clamp(1.25rem, 1.8vw, 1.5rem);
+  --kc-text-body-xl: 1.35rem;
+  --kc-text-body-lg: 1.2rem;
+  --kc-text-body: 1.2rem;
   --kc-text-body-sm: 1rem;
-  --kc-text-caption: 0.875rem;
-  --kc-text-overline: 0.8125rem;
+  --kc-text-caption: 0.9375rem;
+  --kc-text-overline: 0.875rem;
 
-  /* Line Heights */
-  --kc-leading-tight: 1.05;
-  --kc-leading-snug: 1.2;
+  --kc-leading-tight: 1.02;
+  --kc-leading-snug: 1.15;
   --kc-leading-normal: 1.6;
-  --kc-leading-relaxed: 1.75;
+  --kc-leading-relaxed: 1.7;
 
-  /* Letter Spacing */
-  --kc-tracking-tight: -0.03em;
+  --kc-tracking-tight: -0.035em;
   --kc-tracking-normal: 0em;
   --kc-tracking-wide: 0.05em;
   --kc-tracking-wider: 0.1em;
   --kc-tracking-widest: 0.2em;
 
-  /* --- SPACING TOKENS --- */
+  /* --- SPACING — tight between, generous within --- */
   --kc-space-xs: 0.25rem;
   --kc-space-sm: 0.5rem;
   --kc-space-md: 1rem;
   --kc-space-lg: 1.5rem;
   --kc-space-xl: 2rem;
   --kc-space-2xl: 3rem;
-  --kc-space-3xl: 4rem;
+  --kc-space-3xl: 4.5rem;
   --kc-space-4xl: 6rem;
-  --kc-space-5xl: 8rem;
-  --kc-space-6xl: 12rem;
+  --kc-space-5xl: 9rem;
+  --kc-space-6xl: 14rem;
 
-  /* Section Spacing — Reduced vertical, more horizontal */
-  --kc-section-py: clamp(3.5rem, 7vw, 6rem);
+  --kc-section-py: clamp(3rem, 5vw, 5rem);
   --kc-section-px: clamp(1.5rem, 4vw, 5rem);
 
   /* --- RADIUS --- */
   --kc-radius-sm: 10px;
-  --kc-radius-md: 14px;
-  --kc-radius-lg: 20px;
-  --kc-radius-xl: 28px;
-  --kc-radius-2xl: 36px;
+  --kc-radius-md: 16px;
+  --kc-radius-lg: 22px;
+  --kc-radius-xl: 32px;
+  --kc-radius-2xl: 40px;
   --kc-radius-full: 9999px;
 
   /* --- SHADOWS --- */
@@ -150,10 +144,7 @@
   --kc-container-narrow: 800px;
 }
 
-/* ================================================================
-   BASE STYLES
-   ================================================================ */
-
+/* --- BASE --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -181,24 +172,19 @@ body {
   color: var(--kc-white);
 }
 
-/* ================================================================
-   TYPOGRAPHY CLASSES
-   ================================================================ */
-
-.font-display {
-  font-family: var(--kc-font-display);
-}
-
-.font-heading {
-  font-family: var(--kc-font-heading);
-}
-
-.font-body {
-  font-family: var(--kc-font-body);
-}
+/* --- TYPOGRAPHY UTILITIES --- */
+.font-display { font-family: var(--kc-font-display); }
+.font-heading { font-family: var(--kc-font-heading); }
+.font-body { font-family: var(--kc-font-body); }
 
 .text-hero {
   font-size: var(--kc-text-hero);
+  line-height: var(--kc-leading-tight);
+  letter-spacing: var(--kc-tracking-tight);
+}
+
+.text-hero-mono {
+  font-size: var(--kc-text-hero-mono);
   line-height: var(--kc-leading-tight);
   letter-spacing: var(--kc-tracking-tight);
 }
@@ -216,10 +202,7 @@ body {
   font-weight: 500;
 }
 
-/* ================================================================
-   UTILITY CLASSES
-   ================================================================ */
-
+/* --- CONTAINER --- */
 .kc-container {
   width: 100%;
   max-width: var(--kc-container-max);
@@ -229,19 +212,15 @@ body {
   padding-right: var(--kc-section-px);
 }
 
-.kc-container-wide {
-  max-width: var(--kc-container-wide);
-}
-
-.kc-container-narrow {
-  max-width: var(--kc-container-narrow);
-}
+.kc-container-wide { max-width: var(--kc-container-wide); }
+.kc-container-narrow { max-width: var(--kc-container-narrow); }
 
 .kc-section {
   padding-top: var(--kc-section-py);
   padding-bottom: var(--kc-section-py);
 }
 
+/* --- UTILITY --- */
 .kc-glass {
   background: var(--kc-glass-bg);
   backdrop-filter: var(--kc-glass-blur);
@@ -273,9 +252,7 @@ body {
   pointer-events: none;
 }
 
-.kc-glow {
-  box-shadow: var(--kc-shadow-glow);
-}
+.kc-glow { box-shadow: var(--kc-shadow-glow); }
 
 .kc-card {
   background: var(--kc-gradient-card);
@@ -293,31 +270,13 @@ body {
   transform: translateY(-4px);
 }
 
-/* ================================================================
-   SCROLLBAR
-   ================================================================ */
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--kc-black); }
+::-webkit-scrollbar-thumb { background: var(--kc-gray-700); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--kc-gold); }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--kc-black);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--kc-gray-700);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--kc-gold);
-}
-
-/* ================================================================
-   NOISE TEXTURE OVERLAY
-   ================================================================ */
-
+/* --- NOISE --- */
 .kc-noise::before {
   content: "";
   position: fixed;
@@ -328,10 +287,7 @@ body {
   z-index: 9999;
 }
 
-/* ================================================================
-   RESPONSIVE CONTAINER UTILITY
-   ================================================================ */
-
+/* --- RESPONSIVE --- */
 @media (max-width: 640px) {
   :root {
     --kc-section-px: 1.25rem;

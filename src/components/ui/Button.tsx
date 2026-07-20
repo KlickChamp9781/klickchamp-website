@@ -18,7 +18,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "bg-kc-gold text-kc-black hover:bg-kc-gold-light shadow-[var(--kc-shadow-gold)] hover:shadow-[var(--kc-shadow-gold-lg)]",
   secondary:
-    "bg-kc-white/10 text-kc-white border border-kc-white/10 hover:bg-kc-white/15 hover:border-kc-white/20",
+    "bg-transparent text-kc-white border border-kc-white/20 hover:bg-kc-white/10 hover:border-kc-white/30",
   outline:
     "bg-transparent text-kc-gold border border-kc-gold/40 hover:bg-kc-gold/10 hover:border-kc-gold/60",
   ghost:
@@ -28,10 +28,10 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: "px-5 py-2.5 text-sm rounded-[var(--kc-radius-sm)]",
-  md: "px-8 py-3.5 text-base rounded-[var(--kc-radius-md)]",
-  lg: "px-10 py-5 text-lg rounded-[var(--kc-radius-lg)]",
-  xl: "px-12 py-6 text-xl rounded-[var(--kc-radius-xl)]",
+  sm: "px-6 py-3 text-sm rounded-[var(--kc-radius-sm)]",
+  md: "px-9 py-4 text-base rounded-[var(--kc-radius-md)]",
+  lg: "px-12 py-5 text-lg rounded-[var(--kc-radius-lg)]",
+  xl: "px-14 py-6 text-xl rounded-[var(--kc-radius-xl)]",
 };
 
 export function Button({
@@ -45,7 +45,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 font-[family-name:var(--kc-font-heading)] font-medium transition-all duration-[var(--kc-duration-normal)] ease-[var(--kc-ease-out-expo)] cursor-pointer select-none whitespace-nowrap",
+    "inline-flex items-center justify-center gap-3 font-[family-name:var(--kc-font-heading)] font-medium transition-all duration-[var(--kc-duration-normal)] ease-[var(--kc-ease-out-expo)] cursor-pointer select-none whitespace-nowrap",
     variantClasses[variant],
     sizeClasses[size],
     disabled && "opacity-50 pointer-events-none",

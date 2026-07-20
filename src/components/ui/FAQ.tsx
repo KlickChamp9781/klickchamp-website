@@ -22,17 +22,17 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
     >
       <button
         onClick={onToggle}
-        className="w-full py-8 flex items-center justify-between text-left cursor-pointer"
+        className="w-full py-8 flex items-center justify-between text-left cursor-pointer group"
       >
-        <span className="text-[var(--kc-text-body-xl)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-white pr-8">
+        <span className="text-[var(--kc-text-body-xl)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-white pr-8 group-hover:text-kc-gold transition-colors duration-300">
           {faq.question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="w-7 h-7 flex-shrink-0 text-kc-gold"
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="w-8 h-8 flex-shrink-0 text-kc-gold/60 group-hover:text-kc-gold transition-colors"
         >
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-full h-full">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
           </svg>
         </motion.span>
@@ -43,10 +43,10 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-8 text-[var(--kc-text-body)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)]">
+            <p className="pb-8 text-[var(--kc-text-body)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)] max-w-2xl">
               {faq.answer}
             </p>
           </motion.div>

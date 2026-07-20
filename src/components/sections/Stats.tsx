@@ -12,14 +12,14 @@ type StatsProps = {
 
 export function Stats({ stats, className }: StatsProps) {
   return (
-    <section className={cn("kc-section", className)}>
-      <div className="kc-container">
+    <section className={cn("relative", className)}>
+      <div className="kc-container py-14 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -34,18 +34,18 @@ export function Stats({ stats, className }: StatsProps) {
               }}
               className="text-center"
             >
-              <div className="text-[var(--kc-text-display)] font-[family-name:var(--kc-font-display)] kc-gold-text mb-3">
+              <div className="text-[var(--kc-text-display)] font-[family-name:var(--kc-font-display)] kc-gold-text mb-2">
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}
                   prefix={stat.prefix}
                 />
               </div>
-              <h3 className="text-base font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-1">
+              <h3 className="text-[var(--kc-text-h4)] font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-1">
                 {stat.label}
               </h3>
               {stat.description && (
-                <p className="text-sm text-kc-gray-500">{stat.description}</p>
+                <p className="text-[var(--kc-text-body-sm)] text-kc-gray-500">{stat.description}</p>
               )}
             </motion.div>
           ))}
