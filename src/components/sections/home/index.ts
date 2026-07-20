@@ -1,4 +1,5 @@
 export { Hero } from "./Hero";
+export { BrandMarquee } from "./BrandMarquee";
 export { ServicesPreview } from "./ServicesPreview";
 export { WhyChooseUs } from "./WhyChooseUs";
 export { Process } from "./Process";

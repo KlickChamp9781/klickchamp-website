@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
-import { NAVIGATION } from "@/constants/site";
+import { NAVIGATION, SITE_CONFIG } from "@/constants/site";
 import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
@@ -41,7 +41,6 @@ export function Navbar() {
         style={{ height: "88px" }}
       >
         <div className="kc-container flex items-center justify-between h-full">
-          {/* Logo — Left */}
           <a href="/" className="flex items-center gap-3 group flex-shrink-0">
             <div className="w-10 h-10 rounded-[var(--kc-radius-md)] bg-kc-gold flex items-center justify-center group-hover:shadow-[var(--kc-shadow-gold-lg)] transition-shadow duration-500">
               <span className="text-kc-black font-bold text-base font-[family-name:var(--kc-font-heading)]">K</span>
@@ -51,7 +50,6 @@ export function Navbar() {
             </span>
           </a>
 
-          {/* Navigation — Perfectly Centered */}
           <nav className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2" style={{ gap: "40px" }}>
             {(NAVIGATION.main as unknown as Array<{ label: string; href: string; children?: Array<{ label: string; href: string }> }>).map((item) => (
               <div
@@ -91,7 +89,6 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* CTA — Right */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <Button href="/contact" variant="primary" size="sm" className="hidden lg:inline-flex">
               Get a Quote
@@ -109,7 +106,6 @@ export function Navbar() {
         </div>
       </motion.header>
 
-      {/* Spacer for fixed header */}
       <div style={{ height: "88px" }} />
 
       <AnimatePresence>

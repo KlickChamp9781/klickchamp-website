@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {
   Hero,
+  BrandMarquee,
   ServicesPreview,
   WhyChooseUs,
   Process,
@@ -31,6 +32,7 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <BrandMarquee />
       <Stats stats={HOME_STATS} className="border-y border-kc-white/5" />
       <ServicesPreview />
       <WhyChooseUs />
