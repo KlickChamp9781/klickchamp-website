@@ -20,11 +20,9 @@ export function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-20 max-w-3xl"
+          className="mb-16"
         >
-          <p className="text-overline font-[family-name:var(--kc-font-heading)] kc-gold-text mb-8">
-            Our Process
-          </p>
+          <p className="text-overline font-heading kc-gold-text mb-8">Our Process</p>
           <h2 className="text-display font-display text-kc-white">
             How We Drive
             <br />
@@ -33,30 +31,32 @@ export function Process() {
         </motion.div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-kc-gold/20 via-kc-gold/10 to-transparent" />
+          {STEPS.map((step, index) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.12 }}
+              className="relative flex gap-8 pb-16 last:pb-0"
+            >
+              {/* Timeline dot + connector */}
+              <div className="flex flex-col items-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-kc-gold/10 border border-kc-gold/30 flex items-center justify-center z-10">
+                  <span className="text-lg font-heading font-bold kc-gold-text">{step.number}</span>
+                </div>
+                {index < STEPS.length - 1 && (
+                  <div className="w-px flex-1 bg-gradient-to-b from-kc-gold/30 to-transparent mt-2" />
+                )}
+              </div>
 
-          <div className="kc-grid">
-            {STEPS.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.12 }}
-                className="lg:col-span-3 md:col-span-6 col-span-12"
-              >
-                <span className="text-7xl md:text-8xl font-display kc-gold-text opacity-40 leading-none block mb-8 select-none">
-                  {step.number}
-                </span>
-                <h3 className="text-[var(--kc-text-h3)] font-[family-name:var(--kc-font-heading)] font-bold text-kc-white mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-[var(--kc-text-body)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)]">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+              {/* Content */}
+              <div className="pb-8 border-b border-kc-white/5 last:border-b-0 flex-1">
+                <h3 className="text-[var(--kc-text-h3)] font-heading font-bold text-kc-white mb-3">{step.title}</h3>
+                <p className="text-[var(--kc-text-body)] text-kc-gray-400 leading-relaxed max-w-2xl">{step.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
