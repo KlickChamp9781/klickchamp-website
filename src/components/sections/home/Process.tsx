@@ -11,8 +11,8 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="kc-section relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-kc-white/5 to-transparent" />
+    <section className="kc-section relative overflow-hidden bg-kc-black-pure">
+      <div className="kc-divider absolute top-0 left-8 right-8" />
 
       <div className="kc-container">
         <motion.div
@@ -22,7 +22,9 @@ export function Process() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <p className="text-overline font-heading kc-gold-text mb-8">Our Process</p>
+          <p className="text-overline font-heading text-kc-gray-500 mb-8 tracking-[0.25em]">
+            Our Process
+          </p>
           <h2 className="text-display font-display text-kc-white">
             How We Drive
             <br />
@@ -30,30 +32,27 @@ export function Process() {
           </h2>
         </motion.div>
 
-        <div className="relative">
+        <div className="max-w-3xl">
           {STEPS.map((step, index) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.12 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
               className="relative flex gap-8 pb-16 last:pb-0"
             >
-              {/* Timeline dot + connector */}
               <div className="flex flex-col items-center flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-kc-gold/10 border border-kc-gold/30 flex items-center justify-center z-10">
-                  <span className="text-lg font-heading font-bold kc-gold-text">{step.number}</span>
+                <div className="w-10 h-10 rounded-full border border-kc-white/10 flex items-center justify-center bg-kc-black-pure z-10">
+                  <span className="text-sm font-heading font-medium text-kc-gray-400">{step.number}</span>
                 </div>
                 {index < STEPS.length - 1 && (
-                  <div className="w-px flex-1 bg-gradient-to-b from-kc-gold/30 to-transparent mt-2" />
+                  <div className="w-px flex-1 bg-gradient-to-b from-kc-white/[0.06] to-transparent mt-2" />
                 )}
               </div>
-
-              {/* Content */}
-              <div className="pb-8 border-b border-kc-white/5 last:border-b-0 flex-1">
+              <div className="pb-8 kc-border-bottom last:border-b-0 flex-1">
                 <h3 className="text-[var(--kc-text-h3)] font-heading font-bold text-kc-white mb-3">{step.title}</h3>
-                <p className="text-[var(--kc-text-body)] text-kc-gray-400 leading-relaxed max-w-2xl">{step.description}</p>
+                <p className="text-[var(--kc-text-body)] text-kc-gray-500 leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
           ))}

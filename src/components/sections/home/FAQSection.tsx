@@ -12,16 +12,16 @@ function FAQItem({ faq, index, isOpen, onToggle }: { faq: FAQ; index: number; is
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: index * 0.05 }}
-      className="border-b border-kc-white/5 last:border-b-0"
+      className="border-b border-kc-white/[0.04] last:border-b-0"
     >
       <button onClick={onToggle} className="w-full py-8 flex items-center justify-between text-left cursor-pointer group">
-        <span className="text-[var(--kc-text-body-xl)] font-heading font-medium text-kc-white pr-8 group-hover:text-kc-gold transition-colors duration-300">
+        <span className="text-[var(--kc-text-body-xl)] font-heading font-medium text-kc-white pr-8 group-hover:text-kc-gray-300 transition-colors duration-300">
           {faq.question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="w-8 h-8 flex-shrink-0 text-kc-gold/60 group-hover:text-kc-gold transition-colors"
+          className="w-6 h-6 flex-shrink-0 text-kc-gray-600 group-hover:text-kc-gray-400 transition-colors"
         >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-full h-full">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
@@ -37,7 +37,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: { faq: FAQ; index: number; is
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-8 text-[var(--kc-text-body)] text-kc-gray-400 leading-relaxed max-w-2xl">
+            <p className="pb-8 text-[var(--kc-text-body)] text-kc-gray-500 leading-relaxed max-w-2xl">
               {faq.answer}
             </p>
           </motion.div>
@@ -51,8 +51,8 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="kc-section relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-kc-white/5 to-transparent" />
+    <section className="kc-section relative bg-kc-black-pure">
+      <div className="kc-divider absolute top-0 left-8 right-8" />
 
       <div className="kc-container">
         <div className="kc-grid">
@@ -64,14 +64,14 @@ export function FAQSection() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="lg:sticky lg:top-32"
             >
-              <p className="text-overline font-heading kc-gold-text mb-8">FAQ</p>
+              <p className="text-overline font-heading text-kc-gray-500 mb-8 tracking-[0.25em]">FAQ</p>
               <h2 className="text-display font-display text-kc-white">
                 Frequently Asked
                 <br />
                 <span className="kc-gold-text">Questions.</span>
               </h2>
-              <p className="text-[var(--kc-text-body)] text-kc-gray-500 leading-relaxed mt-8 max-w-sm">
-                Still have questions? <a href="/contact" className="text-kc-gold hover:underline transition-colors">Contact us</a> and we&apos;ll get back to you within 24 hours.
+              <p className="text-[var(--kc-text-body)] text-kc-gray-600 leading-relaxed mt-8 max-w-sm">
+                Still have questions? <a href="/contact" className="text-kc-white hover:text-kc-gold transition-colors">Contact us</a> and we&apos;ll get back to you within 24 hours.
               </p>
             </motion.div>
           </div>
