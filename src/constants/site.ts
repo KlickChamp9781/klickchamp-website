@@ -1,0 +1,77 @@
+export const SITE_CONFIG = {
+  name: "KlickChamp",
+  tagline: "We Build Digital Empires",
+  description:
+    "KlickChamp is a premium digital marketing agency in Kolkata, India. We deliver SEO, Meta Ads, Google Ads, Social Media, Web Design, and complete digital growth solutions.",
+  url: "https://klickchamp.com",
+  email: "hello@klickchamp.com",
+  phone: "+91-9876543210",
+  phoneFormatted: "+91 98765 43210",
+  address: {
+    street: "Salt Lake City",
+    city: "Kolkata",
+    state: "West Bengal",
+    country: "India",
+    zip: "700091",
+    full: "Salt Lake City, Kolkata, West Bengal 700091, India",
+  },
+  social: {
+    linkedin: "https://linkedin.com/company/klickchamp",
+    twitter: "https://twitter.com/klickchamp",
+    instagram: "https://instagram.com/klickchamp",
+    facebook: "https://facebook.com/klickchamp",
+    youtube: "https://youtube.com/@klickchamp",
+  },
+  foundedYear: 2021,
+  gstNumber: "19XXXXX1234X1ZX",
+} as const;
+
+export const NAVIGATION = {
+  main: [
+    { label: "Home", href: "/" },
+    {
+      label: "Services",
+      href: "/services",
+      children: [
+        { label: "All Services", href: "/services" },
+        { label: "SEO", href: "/services/seo" },
+        { label: "Meta Ads", href: "/services/meta-ads" },
+        { label: "Google Ads", href: "/services/google-ads" },
+        { label: "Social Media", href: "/services/social-media-optimization" },
+        { label: "Website Design", href: "/services/website-design-development" },
+        { label: "Graphic Design", href: "/services/graphic-design" },
+        { label: "Video Editing", href: "/services/video-editing" },
+        { label: "Email Marketing", href: "/services/email-marketing" },
+        { label: "YouTube Optimization", href: "/services/youtube-optimization" },
+        { label: "WhatsApp Campaign", href: "/services/whatsapp-campaign" },
+        { label: "Google My Business", href: "/services/google-my-business" },
+      ],
+    },
+    { label: "About", href: "/about" },
+    { label: "Blogs", href: "/blogs" },
+    { label: "Testimonials", href: "/testimonials" },
+    { label: "Team", href: "/team" },
+    { label: "Contact", href: "/contact" },
+  ],
+  footer: {
+    services: [
+      { label: "SEO Services", href: "/services/seo" },
+      { label: "Meta Ads", href: "/services/meta-ads" },
+      { label: "Google Ads", href: "/services/google-ads" },
+      { label: "Social Media Marketing", href: "/services/social-media-optimization" },
+      { label: "Website Design", href: "/services/website-design-development" },
+      { label: "Graphic Design", href: "/services/graphic-design" },
+      { label: "Video Editing", href: "/services/video-editing" },
+      { label: "Email Marketing", href: "/services/email-marketing" },
+    ],
+    company: [
+      { label: "About Us", href: "/about" },
+      { label: "Our Team", href: "/team" },
+      { label: "Testimonials", href: "/testimonials" },
+      { label: "Blogs", href: "/blogs" },
+      { label: "Contact", href: "/contact" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+    ],
+  },
+} as const;
