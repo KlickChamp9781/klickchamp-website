@@ -2,7 +2,7 @@
 
 /* ================================================================
    KLICKCHAMP DESIGN SYSTEM — CSS CUSTOM PROPERTIES
-   Premium Digital Marketing Agency
+   Premium Digital Marketing Agency — UI Refinement v2
    ================================================================ */
 
 /* --- COLOR TOKENS --- */
@@ -54,23 +54,24 @@
   --kc-font-body: "Inter", "Helvetica Neue", sans-serif;
   --kc-font-mono: "JetBrains Mono", monospace;
 
-  /* Font Sizes — Editorial Scale */
-  --kc-text-hero: clamp(3.5rem, 8vw, 8rem);
-  --kc-text-display: clamp(2.5rem, 5vw, 5rem);
-  --kc-text-h1: clamp(2rem, 4vw, 3.5rem);
-  --kc-text-h2: clamp(1.75rem, 3vw, 2.75rem);
-  --kc-text-h3: clamp(1.25rem, 2vw, 1.75rem);
-  --kc-text-h4: clamp(1.1rem, 1.5vw, 1.35rem);
+  /* Font Sizes — Premium Editorial Scale */
+  --kc-text-hero: clamp(3.5rem, 7.5vw, 7rem);
+  --kc-text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --kc-text-h1: clamp(2rem, 4vw, 3.25rem);
+  --kc-text-h2: clamp(2rem, 4vw, 3.5rem);
+  --kc-text-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --kc-text-h4: clamp(1.15rem, 1.5vw, 1.35rem);
+  --kc-text-body-xl: 1.25rem;
   --kc-text-body-lg: 1.125rem;
-  --kc-text-body: 1rem;
-  --kc-text-body-sm: 0.875rem;
-  --kc-text-caption: 0.75rem;
-  --kc-text-overline: 0.6875rem;
+  --kc-text-body: 1.125rem;
+  --kc-text-body-sm: 1rem;
+  --kc-text-caption: 0.875rem;
+  --kc-text-overline: 0.8125rem;
 
   /* Line Heights */
-  --kc-leading-tight: 1.1;
-  --kc-leading-snug: 1.25;
-  --kc-leading-normal: 1.5;
+  --kc-leading-tight: 1.05;
+  --kc-leading-snug: 1.2;
+  --kc-leading-normal: 1.6;
   --kc-leading-relaxed: 1.75;
 
   /* Letter Spacing */
@@ -92,16 +93,16 @@
   --kc-space-5xl: 8rem;
   --kc-space-6xl: 12rem;
 
-  /* Section Spacing */
-  --kc-section-py: clamp(4rem, 10vw, 8rem);
-  --kc-section-px: clamp(1.5rem, 5vw, 6rem);
+  /* Section Spacing — Reduced vertical, more horizontal */
+  --kc-section-py: clamp(3.5rem, 7vw, 6rem);
+  --kc-section-px: clamp(1.5rem, 4vw, 5rem);
 
   /* --- RADIUS --- */
-  --kc-radius-sm: 8px;
-  --kc-radius-md: 12px;
-  --kc-radius-lg: 18px;
-  --kc-radius-xl: 24px;
-  --kc-radius-2xl: 32px;
+  --kc-radius-sm: 10px;
+  --kc-radius-md: 14px;
+  --kc-radius-lg: 20px;
+  --kc-radius-xl: 28px;
+  --kc-radius-2xl: 36px;
   --kc-radius-full: 9999px;
 
   /* --- SHADOWS --- */
@@ -111,9 +112,9 @@
   --kc-shadow-xl: 0 16px 64px rgba(0,0,0,0.6);
   --kc-shadow-gold: 0 4px 24px rgba(201,168,76,0.15);
   --kc-shadow-gold-lg: 0 8px 48px rgba(201,168,76,0.2);
-  --kc-shadow-glow: 0 0 60px rgba(201,168,76,0.1);
+  --kc-shadow-glow: 0 0 80px rgba(201,168,76,0.12);
   --kc-shadow-card: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03);
-  --kc-shadow-card-hover: 0 8px 40px rgba(0,0,0,0.4), 0 0 30px rgba(201,168,76,0.08);
+  --kc-shadow-card-hover: 0 12px 48px rgba(0,0,0,0.4), 0 0 40px rgba(201,168,76,0.1);
 
   /* --- BORDERS --- */
   --kc-border-subtle: 1px solid rgba(255,255,255,0.06);
@@ -144,9 +145,9 @@
   --kc-z-toast: 500;
 
   /* --- CONTAINER --- */
-  --kc-container-max: 1320px;
-  --kc-container-wide: 1480px;
-  --kc-container-narrow: 720px;
+  --kc-container-max: 1500px;
+  --kc-container-wide: 1680px;
+  --kc-container-narrow: 800px;
 }
 
 /* ================================================================
@@ -289,7 +290,7 @@ body {
 .kc-card:hover {
   box-shadow: var(--kc-shadow-card-hover);
   border-color: rgba(201, 168, 76, 0.15);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 /* ================================================================
@@ -334,7 +335,7 @@ body {
 @media (max-width: 640px) {
   :root {
     --kc-section-px: 1.25rem;
-    --kc-section-py: 3rem;
+    --kc-section-py: 2.5rem;
   }
 }
 

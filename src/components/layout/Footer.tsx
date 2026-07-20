@@ -11,14 +11,14 @@ export function Footer() {
       {/* Main Footer */}
       <div className="kc-section">
         <div className="kc-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
             {/* Brand */}
             <div className="lg:col-span-1">
               <a href="/" className="flex items-center gap-2 mb-4">
                 <div className="w-9 h-9 rounded-[var(--kc-radius-sm)] bg-kc-gold flex items-center justify-center">
                   <span className="text-kc-black font-bold text-sm font-[family-name:var(--kc-font-heading)]">K</span>
                 </div>
-                <span className="text-xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white">
+                <span className="text-2xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white">
                   Klick<span className="kc-gold-text">Champ</span>
                 </span>
               </a>
@@ -42,15 +42,15 @@ export function Footer() {
 
             {/* Services */}
             <div>
-              <h3 className="text-sm font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white uppercase tracking-[var(--kc-tracking-widest)] mb-6">
+              <h3 className="text-base font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white uppercase tracking-[var(--kc-tracking-widest)] mb-6">
                 Services
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3.5">
                 {NAVIGATION.footer.services.map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="text-sm text-kc-gray-400 hover:text-kc-gold transition-colors duration-300"
+                      className="text-[var(--kc-text-body-sm)] text-kc-gray-400 hover:text-kc-gold transition-colors duration-300"
                     >
                       {item.label}
                     </a>
@@ -61,15 +61,15 @@ export function Footer() {
 
             {/* Company */}
             <div>
-              <h3 className="text-sm font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white uppercase tracking-[var(--kc-tracking-widest)] mb-6">
+              <h3 className="text-base font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white uppercase tracking-[var(--kc-tracking-widest)] mb-6">
                 Company
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3.5">
                 {NAVIGATION.footer.company.map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="text-sm text-kc-gray-400 hover:text-kc-gold transition-colors duration-300"
+                      className="text-[var(--kc-text-body-sm)] text-kc-gray-400 hover:text-kc-gold transition-colors duration-300"
                     >
                       {item.label}
                     </a>
@@ -80,31 +80,31 @@ export function Footer() {
 
             {/* Contact */}
             <div>
-              <h3 className="text-sm font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white uppercase tracking-[var(--kc-tracking-widest)] mb-6">
+              <h3 className="text-base font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white uppercase tracking-[var(--kc-tracking-widest)] mb-6">
                 Contact
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 <li>
-                  <p className="text-xs text-kc-gray-500 mb-1">Email</p>
+                  <p className="text-sm text-kc-gray-500 mb-1">Email</p>
                   <a
                     href={`mailto:${SITE_CONFIG.email}`}
-                    className="text-sm text-kc-gray-300 hover:text-kc-gold transition-colors duration-300"
+                    className="text-[var(--kc-text-body-sm)] text-kc-gray-300 hover:text-kc-gold transition-colors duration-300"
                   >
                     {SITE_CONFIG.email}
                   </a>
                 </li>
                 <li>
-                  <p className="text-xs text-kc-gray-500 mb-1">Phone</p>
+                  <p className="text-sm text-kc-gray-500 mb-1">Phone</p>
                   <a
                     href={`tel:${SITE_CONFIG.phone}`}
-                    className="text-sm text-kc-gray-300 hover:text-kc-gold transition-colors duration-300"
+                    className="text-[var(--kc-text-body-sm)] text-kc-gray-300 hover:text-kc-gold transition-colors duration-300"
                   >
                     {SITE_CONFIG.phoneFormatted}
                   </a>
                 </li>
                 <li>
-                  <p className="text-xs text-kc-gray-500 mb-1">Address</p>
-                  <p className="text-sm text-kc-gray-300">
+                  <p className="text-sm text-kc-gray-500 mb-1">Address</p>
+                  <p className="text-[var(--kc-text-body-sm)] text-kc-gray-300">
                     {SITE_CONFIG.address.full}
                   </p>
                 </li>
@@ -116,15 +116,15 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-kc-white/5">
-        <div className="kc-container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-kc-gray-600">
+        <div className="kc-container py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-kc-gray-600">
             &copy; {currentYear} {SITE_CONFIG.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="/privacy-policy" className="text-xs text-kc-gray-600 hover:text-kc-gray-400 transition-colors">
+            <a href="/privacy-policy" className="text-sm text-kc-gray-600 hover:text-kc-gray-400 transition-colors">
               Privacy Policy
             </a>
-            <a href="/terms-of-service" className="text-xs text-kc-gray-600 hover:text-kc-gray-400 transition-colors">
+            <a href="/terms-of-service" className="text-sm text-kc-gray-600 hover:text-kc-gray-400 transition-colors">
               Terms of Service
             </a>
           </div>

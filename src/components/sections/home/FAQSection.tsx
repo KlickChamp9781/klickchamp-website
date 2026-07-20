@@ -9,7 +9,7 @@ export function FAQSection() {
   return (
     <section className="kc-section relative">
       <div className="kc-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <SectionHeading
             overline="FAQ"
             heading="Frequently Asked Questions"

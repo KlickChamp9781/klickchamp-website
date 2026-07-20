@@ -32,20 +32,20 @@ export function ServiceCard({
         delay: index * 0.1,
       }}
       whileHover={{ y: -6 }}
-      className="kc-card group block p-8 relative overflow-hidden"
+      className="kc-card group block p-10 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-kc-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="relative z-10">
-        <div className="w-14 h-14 rounded-[var(--kc-radius-md)] bg-kc-gold/10 flex items-center justify-center mb-6 group-hover:bg-kc-gold/20 transition-colors duration-300">
-          <span className="text-2xl">{icon}</span>
+        <div className="w-16 h-16 rounded-[var(--kc-radius-lg)] bg-kc-gold/10 flex items-center justify-center mb-7 group-hover:bg-kc-gold/20 transition-colors duration-300">
+          <span className="text-3xl">{icon}</span>
         </div>
 
-        <h3 className="text-[var(--kc-text-h4)] font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-3">
+        <h3 className="text-[var(--kc-text-h3)] font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-4">
           {title}
         </h3>
 
-        <p className="text-kc-gray-400 text-sm leading-[var(--kc-leading-relaxed)] mb-4">
+        <p className="text-kc-gray-400 text-[var(--kc-text-body)] leading-[var(--kc-leading-relaxed)] mb-5">
           {description}
         </p>
 
@@ -54,7 +54,7 @@ export function ServiceCard({
             {features.slice(0, 3).map((feature) => (
               <li
                 key={feature}
-                className="flex items-center gap-2 text-xs text-kc-gray-500"
+                className="flex items-center gap-2 text-sm text-kc-gray-500"
               >
                 <span className="w-1 h-1 rounded-full bg-kc-gold" />
                 {feature}

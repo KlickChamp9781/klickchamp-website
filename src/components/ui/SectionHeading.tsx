@@ -27,13 +27,13 @@ export function SectionHeading({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "max-w-3xl",
+        "max-w-4xl",
         align === "center" && "mx-auto text-center",
         className
       )}
     >
       {overline && (
-        <p className="text-overline font-[family-name:var(--kc-font-heading)] kc-gold-text mb-4">
+        <p className="text-overline font-[family-name:var(--kc-font-heading)] kc-gold-text mb-5">
           {overline}
         </p>
       )}
@@ -46,7 +46,7 @@ export function SectionHeading({
         {heading}
       </h2>
       {subheading && (
-        <p className="mt-4 text-[var(--kc-text-body-lg)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)] max-w-2xl">
+        <p className="mt-5 text-[var(--kc-text-body-xl)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)] max-w-3xl">
           {subheading}
         </p>
       )}

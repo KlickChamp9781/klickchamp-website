@@ -19,14 +19,14 @@ export function Hero() {
         <div className="absolute top-0 left-3/4 w-px h-full bg-kc-white" />
       </div>
 
-      <div className="kc-container relative z-10 py-32 md:py-40">
-        <div className="max-w-5xl">
+      <div className="kc-container relative z-10 py-32 md:py-44">
+        <div className="max-w-6xl">
           {/* Overline */}
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-overline font-[family-name:var(--kc-font-heading)] kc-gold-text mb-6"
+            className="text-overline font-[family-name:var(--kc-font-heading)] kc-gold-text mb-8"
           >
             Premium Digital Marketing Agency — Kolkata, India
           </motion.p>
@@ -36,7 +36,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-            className="text-hero font-display text-kc-white leading-[var(--kc-leading-tight)] tracking-[var(--kc-tracking-tight)] mb-8"
+            className="text-hero font-display text-kc-white leading-[var(--kc-leading-tight)] tracking-[var(--kc-tracking-tight)] mb-10"
           >
             We Build Digital
             <br />
@@ -48,7 +48,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="text-[var(--kc-text-body-lg)] text-kc-gray-400 max-w-xl leading-[var(--kc-leading-relaxed)] mb-10"
+            className="text-[var(--kc-text-body-xl)] text-kc-gray-400 max-w-2xl leading-[var(--kc-leading-relaxed)] mb-12"
           >
             Data-driven strategies. Premium execution. Measurable growth.
             <br className="hidden sm:block" />
@@ -78,19 +78,19 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-16 flex items-center gap-8 flex-wrap"
+            className="mt-20 flex items-center gap-8 flex-wrap"
           >
-            <div className="flex items-center gap-2 text-xs text-kc-gray-500">
+            <div className="flex items-center gap-2 text-sm text-kc-gray-500">
               <span className="w-1.5 h-1.5 rounded-full bg-kc-success" />
               150+ Brands Served
             </div>
             <div className="w-px h-4 bg-kc-white/10" />
-            <div className="flex items-center gap-2 text-xs text-kc-gray-500">
+            <div className="flex items-center gap-2 text-sm text-kc-gray-500">
               <span className="w-1.5 h-1.5 rounded-full bg-kc-success" />
               98% Client Retention
             </div>
             <div className="w-px h-4 bg-kc-white/10" />
-            <div className="flex items-center gap-2 text-xs text-kc-gray-500">
+            <div className="flex items-center gap-2 text-sm text-kc-gray-500">
               <span className="w-1.5 h-1.5 rounded-full bg-kc-success" />
               3.2x Avg. ROI
             </div>

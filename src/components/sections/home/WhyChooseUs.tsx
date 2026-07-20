@@ -15,7 +15,7 @@ export function WhyChooseUs() {
           className="mb-16"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {WHY_CHOOSE_US.map((item, index) => (
             <motion.div
               key={item.title}
@@ -29,11 +29,11 @@ export function WhyChooseUs() {
               }}
               className="group"
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
-              <h3 className="text-[var(--kc-text-h4)] font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-3">
+              <div className="text-5xl mb-5">{item.icon}</div>
+              <h3 className="text-[var(--kc-text-h3)] font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-4">
                 {item.title}
               </h3>
-              <p className="text-sm text-kc-gray-400 leading-[var(--kc-leading-relaxed)]">
+              <p className="text-[var(--kc-text-body)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)]">
                 {item.description}
               </p>
             </motion.div>

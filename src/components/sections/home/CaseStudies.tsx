@@ -16,7 +16,7 @@ export function CaseStudies() {
           className="mb-16"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {CASE_STUDIES.map((study, index) => (
             <motion.div
               key={study.id}
@@ -28,7 +28,7 @@ export function CaseStudies() {
                 ease: [0.16, 1, 0.3, 1],
                 delay: index * 0.1,
               }}
-              className="kc-card group p-8 flex flex-col"
+              className="kc-card group p-10 flex flex-col"
             >
               {/* Industry badge */}
               <div className="flex items-center gap-3 mb-6">
@@ -41,28 +41,28 @@ export function CaseStudies() {
               </div>
 
               {/* Title */}
-              <h3 className="text-[var(--kc-text-h3)] font-[family-name:var(--kc-font-heading)] font-bold text-kc-white mb-3 leading-tight">
+              <h3 className="text-[var(--kc-text-h2)] font-[family-name:var(--kc-font-heading)] font-bold text-kc-white mb-4 leading-tight">
                 {study.title}
               </h3>
 
               {/* Client */}
-              <p className="text-sm kc-gold-text font-[family-name:var(--kc-font-heading)] font-medium mb-4">
+              <p className="text-[var(--kc-text-body-sm)] kc-gold-text font-[family-name:var(--kc-font-heading)] font-medium mb-5">
                 {study.client}
               </p>
 
               {/* Description */}
-              <p className="text-sm text-kc-gray-400 leading-[var(--kc-leading-relaxed)] mb-8 flex-1">
+              <p className="text-[var(--kc-text-body-sm)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)] mb-8 flex-1">
                 {study.description}
               </p>
 
               {/* Results grid */}
-              <div className="grid grid-cols-3 gap-4 mb-6 py-5 border-t border-kc-white/5">
+              <div className="grid grid-cols-3 gap-4 mb-6 py-6 border-t border-kc-white/5">
                 {study.results.map((result) => (
                   <div key={result.metric} className="text-center">
-                    <p className="text-xl font-[family-name:var(--kc-font-display)] kc-gold-text font-bold mb-1">
+                    <p className="text-2xl font-[family-name:var(--kc-font-display)] kc-gold-text font-bold mb-1">
                       {result.value}
                     </p>
-                    <p className="text-[10px] uppercase tracking-[var(--kc-tracking-wider)] text-kc-gray-500 font-[family-name:var(--kc-font-heading)]">
+                    <p className="text-xs uppercase tracking-[var(--kc-tracking-wider)] text-kc-gray-500 font-[family-name:var(--kc-font-heading)]">
                       {result.metric}
                     </p>
                   </div>
@@ -71,8 +71,8 @@ export function CaseStudies() {
 
               {/* Testimonial quote */}
               {study.testimonial && (
-                <div className="pt-4 border-t border-kc-white/5">
-                  <p className="text-xs text-kc-gray-400 italic">
+                <div className="pt-5 border-t border-kc-white/5">
+                  <p className="text-sm text-kc-gray-400 italic">
                     &ldquo;{study.testimonial}&rdquo;
                   </p>
                   <p className="text-xs text-kc-gray-600 mt-1">

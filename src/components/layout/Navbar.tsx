@@ -45,7 +45,7 @@ export function Navbar() {
             <div className="w-9 h-9 rounded-[var(--kc-radius-sm)] bg-kc-gold flex items-center justify-center">
               <span className="text-kc-black font-bold text-sm font-[family-name:var(--kc-font-heading)]">K</span>
             </div>
-            <span className="text-xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white">
+            <span className="text-2xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white">
               Klick<span className="kc-gold-text">Champ</span>
             </span>
           </a>
@@ -61,7 +61,7 @@ export function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="px-4 py-2 text-sm font-[family-name:var(--kc-font-heading)] font-medium text-kc-gray-300 hover:text-kc-white transition-colors duration-300 rounded-[var(--kc-radius-sm)] hover:bg-kc-white/5"
+                  className="px-4 py-2 text-base font-[family-name:var(--kc-font-heading)] font-medium text-kc-gray-300 hover:text-kc-white transition-colors duration-300 rounded-[var(--kc-radius-sm)] hover:bg-kc-white/5"
                 >
                   {item.label}
                 </a>
@@ -78,7 +78,7 @@ export function Navbar() {
                         <a
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-sm text-kc-gray-300 hover:text-kc-white hover:bg-kc-white/5 rounded-[var(--kc-radius-sm)] transition-colors duration-200"
+                          className="block px-4 py-2.5 text-base text-kc-gray-300 hover:text-kc-white hover:bg-kc-white/5 rounded-[var(--kc-radius-sm)] transition-colors duration-200"
                         >
                           {child.label}
                         </a>
@@ -138,7 +138,7 @@ export function Navbar() {
                     <a
                       href={item.href}
                       onClick={() => setIsMobileOpen(false)}
-                      className="block py-3 text-2xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white hover:text-kc-gold transition-colors"
+                      className="block py-3 text-3xl font-[family-name:var(--kc-font-heading)] font-bold text-kc-white hover:text-kc-gold transition-colors"
                     >
                       {item.label}
                     </a>

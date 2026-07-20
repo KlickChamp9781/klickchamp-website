@@ -28,10 +28,10 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-sm rounded-[var(--kc-radius-sm)]",
-  md: "px-6 py-3 text-base rounded-[var(--kc-radius-md)]",
-  lg: "px-8 py-4 text-lg rounded-[var(--kc-radius-lg)]",
-  xl: "px-10 py-5 text-xl rounded-[var(--kc-radius-xl)]",
+  sm: "px-5 py-2.5 text-sm rounded-[var(--kc-radius-sm)]",
+  md: "px-8 py-3.5 text-base rounded-[var(--kc-radius-md)]",
+  lg: "px-10 py-5 text-lg rounded-[var(--kc-radius-lg)]",
+  xl: "px-12 py-6 text-xl rounded-[var(--kc-radius-xl)]",
 };
 
 export function Button({

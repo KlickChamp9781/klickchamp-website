@@ -22,15 +22,15 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
     >
       <button
         onClick={onToggle}
-        className="w-full py-6 flex items-center justify-between text-left cursor-pointer"
+        className="w-full py-8 flex items-center justify-between text-left cursor-pointer"
       >
-        <span className="text-[var(--kc-text-body-lg)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-white pr-8">
+        <span className="text-[var(--kc-text-body-xl)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-white pr-8">
           {faq.question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3 }}
-          className="w-6 h-6 flex-shrink-0 text-kc-gold"
+          className="w-7 h-7 flex-shrink-0 text-kc-gold"
         >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
@@ -46,7 +46,7 @@ function FAQItem({ faq, index, isOpen, onToggle }: FAQItemProps) {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-sm text-kc-gray-400 leading-[var(--kc-leading-relaxed)]">
+            <p className="pb-8 text-[var(--kc-text-body)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)]">
               {faq.answer}
             </p>
           </motion.div>

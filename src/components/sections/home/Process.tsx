@@ -41,9 +41,9 @@ export function Process() {
           className="mb-16"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 relative">
           {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-kc-gold/20 via-kc-gold/10 to-kc-gold/20" />
+          <div className="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-kc-gold/20 via-kc-gold/10 to-kc-gold/20" />
 
           {STEPS.map((step, index) => (
             <motion.div
@@ -59,18 +59,18 @@ export function Process() {
               className="relative text-center"
             >
               {/* Step number circle */}
-              <div className="relative inline-flex items-center justify-center w-24 h-24 rounded-full border border-kc-gold/20 bg-kc-black mb-6">
-                <span className="text-2xl font-[family-name:var(--kc-font-display)] kc-gold-text">
+              <div className="relative inline-flex items-center justify-center w-28 h-28 rounded-full border border-kc-gold/20 bg-kc-black mb-7">
+                <span className="text-3xl font-[family-name:var(--kc-font-display)] kc-gold-text">
                   {step.number}
                 </span>
                 {/* Glow */}
                 <div className="absolute inset-0 rounded-full bg-kc-gold/5 blur-xl" />
               </div>
 
-              <h3 className="text-lg font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-3">
+              <h3 className="text-xl font-[family-name:var(--kc-font-heading)] font-semibold text-kc-white mb-3">
                 {step.title}
               </h3>
-              <p className="text-sm text-kc-gray-400 leading-[var(--kc-leading-relaxed)] max-w-xs mx-auto">
+              <p className="text-[var(--kc-text-body-sm)] text-kc-gray-400 leading-[var(--kc-leading-relaxed)] max-w-xs mx-auto">
                 {step.description}
               </p>
             </motion.div>
