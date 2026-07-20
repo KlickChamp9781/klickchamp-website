@@ -18,20 +18,21 @@ export function Testimonials() {
           className="mb-16"
         />
 
-        <div className="space-y-8">
-          {/* Featured testimonial — spans wider */}
-          <TestimonialCard testimonial={featured} index={0} featured />
-
-          {/* Rest in a 3-column grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {rest.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.id}
-                testimonial={testimonial}
-                index={index + 1}
-              />
-            ))}
+        <div className="kc-grid mb-8">
+          <div className="lg:col-span-8 col-span-12">
+            <TestimonialCard testimonial={featured} index={0} />
           </div>
+          <div className="lg:col-span-4 col-span-12">
+            <TestimonialCard testimonial={rest[0]} index={1} />
+          </div>
+        </div>
+
+        <div className="kc-grid">
+          {rest.slice(1).map((testimonial, index) => (
+            <div key={testimonial.id} className="lg:col-span-6 col-span-12">
+              <TestimonialCard testimonial={testimonial} index={index + 2} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

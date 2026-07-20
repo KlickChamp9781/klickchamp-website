@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/Button";
 import { getFeaturedServices } from "@/data/services";
 
 export function ServicesPreview() {
-  const [featured, ...rest] = getFeaturedServices();
+  const services = getFeaturedServices();
 
   return (
     <section className="kc-section relative">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-kc-gold/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-kc-gold/30 to-transparent" />
 
       <div className="kc-container">
         <SectionHeading
@@ -21,44 +21,45 @@ export function ServicesPreview() {
           className="mb-16"
         />
 
-        {/* Asymmetrical grid: featured card spans full width on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-          <div className="lg:col-span-2">
+        {/* Row 1: 8 + 4 split */}
+        <div className="kc-grid mb-8">
+          <div className="lg:col-span-8 col-span-12">
             <ServiceCard
-              key={featured.slug}
-              icon={featured.icon}
-              title={featured.shortTitle}
-              description={featured.description}
-              href={`/services/${featured.slug}`}
-              features={featured.features.slice(0, 3)}
+              key={services[0].slug}
+              icon={services[0].icon}
+              title={services[0].shortTitle}
+              description={services[0].description}
+              href={`/services/${services[0].slug}`}
+              features={services[0].features.slice(0, 3)}
               index={0}
-              featured
             />
           </div>
-          {rest.slice(0, 1).map((service, index) => (
+          <div className="lg:col-span-4 col-span-12">
             <ServiceCard
-              key={service.slug}
-              icon={service.icon}
-              title={service.shortTitle}
-              description={service.description}
-              href={`/services/${service.slug}`}
-              features={service.features.slice(0, 3)}
-              index={index + 1}
+              key={services[1].slug}
+              icon={services[1].icon}
+              title={services[1].shortTitle}
+              description={services[1].description}
+              href={`/services/${services[1].slug}`}
+              features={services[1].features.slice(0, 3)}
+              index={1}
             />
-          ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {rest.slice(1).map((service, index) => (
-            <ServiceCard
-              key={service.slug}
-              icon={service.icon}
-              title={service.shortTitle}
-              description={service.description}
-              href={`/services/${service.slug}`}
-              features={service.features.slice(0, 3)}
-              index={index + 2}
-            />
+        {/* Row 2: 3 + 3 + 3 + 3 */}
+        <div className="kc-grid">
+          {services.slice(2).map((service, index) => (
+            <div key={service.slug} className="lg:col-span-3 md:col-span-6 col-span-12">
+              <ServiceCard
+                icon={service.icon}
+                title={service.shortTitle}
+                description={service.description}
+                href={`/services/${service.slug}`}
+                features={service.features.slice(0, 3)}
+                index={index + 2}
+              />
+            </div>
           ))}
         </div>
 
@@ -67,7 +68,7 @@ export function ServicesPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-          className="mt-14 text-center"
+          className="mt-16 text-center"
         >
           <Button href="/services" variant="outline" size="lg">
             View All Services

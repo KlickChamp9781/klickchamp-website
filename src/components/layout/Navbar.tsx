@@ -29,18 +29,20 @@ export function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -100 }}
+        initial={{ y: -88 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
           "fixed top-0 left-0 right-0 z-[var(--kc-z-sticky)] transition-all duration-700",
           isScrolled
-            ? "bg-kc-black/70 backdrop-blur-2xl border-b border-kc-white/5 py-3"
-            : "bg-transparent py-6"
+            ? "bg-kc-black/70 backdrop-blur-2xl border-b border-kc-white/5"
+            : "bg-transparent"
         )}
+        style={{ height: "88px" }}
       >
-        <div className="kc-container flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3 group">
+        <div className="kc-container flex items-center justify-between h-full">
+          {/* Logo — Left */}
+          <a href="/" className="flex items-center gap-3 group flex-shrink-0">
             <div className="w-10 h-10 rounded-[var(--kc-radius-md)] bg-kc-gold flex items-center justify-center group-hover:shadow-[var(--kc-shadow-gold-lg)] transition-shadow duration-500">
               <span className="text-kc-black font-bold text-base font-[family-name:var(--kc-font-heading)]">K</span>
             </div>
@@ -49,7 +51,8 @@ export function Navbar() {
             </span>
           </a>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Navigation — Perfectly Centered */}
+          <nav className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2" style={{ gap: "40px" }}>
             {(NAVIGATION.main as unknown as Array<{ label: string; href: string; children?: Array<{ label: string; href: string }> }>).map((item) => (
               <div
                 key={item.label}
@@ -59,24 +62,24 @@ export function Navbar() {
               >
                 <a
                   href={item.href}
-                  className="px-5 py-2.5 text-[var(--kc-text-body-sm)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-gray-400 hover:text-kc-white transition-colors duration-300 rounded-[var(--kc-radius-sm)] hover:bg-kc-white/5"
+                  className="text-[var(--kc-text-body-sm)] font-[family-name:var(--kc-font-heading)] font-medium text-kc-gray-400 hover:text-kc-white transition-colors duration-300"
                 >
                   {item.label}
                 </a>
                 {item.children && openDropdown === item.label && (
                   <motion.div
-                    initial={{ opacity: 0, y: 8 }}
+                    initial={{ opacity: 0, y: 4 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 8 }}
+                    exit={{ opacity: 0, y: 4 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 pt-2 w-64"
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-56"
                   >
                     <div className="kc-glass rounded-[var(--kc-radius-lg)] p-2 shadow-[var(--kc-shadow-xl)]">
                       {item.children.map((child) => (
                         <a
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-[var(--kc-text-body-sm)] text-kc-gray-300 hover:text-kc-white hover:bg-kc-white/5 rounded-[var(--kc-radius-sm)] transition-colors duration-200"
+                          className="block px-4 py-2.5 text-[var(--kc-text-body-sm)] text-kc-gray-300 hover:text-kc-white hover:bg-kc-white/5 rounded-[var(--kc-radius-sm)] transition-colors duration-200 text-center"
                         >
                           {child.label}
                         </a>
@@ -88,7 +91,8 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
+          {/* CTA — Right */}
+          <div className="flex items-center gap-4 flex-shrink-0">
             <Button href="/contact" variant="primary" size="sm" className="hidden lg:inline-flex">
               Get a Quote
             </Button>
@@ -97,22 +101,16 @@ export function Navbar() {
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="lg:hidden w-12 h-12 flex flex-col items-center justify-center gap-1.5 cursor-pointer"
             >
-              <motion.span
-                animate={isMobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-                className="w-7 h-[1.5px] bg-kc-white block rounded-full"
-              />
-              <motion.span
-                animate={isMobileOpen ? { opacity: 0 } : { opacity: 1 }}
-                className="w-7 h-[1.5px] bg-kc-white block rounded-full"
-              />
-              <motion.span
-                animate={isMobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-                className="w-7 h-[1.5px] bg-kc-white block rounded-full"
-              />
+              <motion.span animate={isMobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }} className="w-7 h-[1.5px] bg-kc-white block rounded-full" />
+              <motion.span animate={isMobileOpen ? { opacity: 0 } : { opacity: 1 }} className="w-7 h-[1.5px] bg-kc-white block rounded-full" />
+              <motion.span animate={isMobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }} className="w-7 h-[1.5px] bg-kc-white block rounded-full" />
             </button>
           </div>
         </div>
       </motion.header>
+
+      {/* Spacer for fixed header */}
+      <div style={{ height: "88px" }} />
 
       <AnimatePresence>
         {isMobileOpen && (
@@ -125,12 +123,7 @@ export function Navbar() {
             <div className="kc-container pt-28 pb-8 h-full flex flex-col justify-between">
               <nav className="space-y-2">
                 {NAVIGATION.main.map((item, index) => (
-                  <motion.div
-                    key={item.label}
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
+                  <motion.div key={item.label} initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.05 }}>
                     <a
                       href={item.href}
                       onClick={() => setIsMobileOpen(false)}
@@ -141,11 +134,9 @@ export function Navbar() {
                   </motion.div>
                 ))}
               </nav>
-              <div className="mt-8">
-                <Button href="/contact" variant="primary" size="xl" className="w-full">
-                  Get a Quote
-                </Button>
-              </div>
+              <Button href="/contact" variant="primary" size="xl" className="w-full">
+                Get a Quote
+              </Button>
             </div>
           </motion.div>
         )}
