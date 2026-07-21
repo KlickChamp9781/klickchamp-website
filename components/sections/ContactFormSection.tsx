@@ -61,7 +61,7 @@ export function ContactFormSection() {
   return (
     <section className="py-20 lg:py-30" id="contact">
       <div className="container-main">
-        <div className="grid-12 gap-12 lg:gap-16">
+        <div className="grid-12 gap-8 lg:gap-16">
           <ScrollReveal className="col-span-12 lg:col-span-5">
             <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-6">
               Let&apos;s build <span className="text-gradient-gold">together.</span>

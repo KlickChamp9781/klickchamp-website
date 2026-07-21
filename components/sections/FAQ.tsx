@@ -8,7 +8,7 @@ export function FAQ() {
   return (
     <section className="py-20 lg:py-30 bg-card">
       <div className="container-main">
-        <div className="grid-12 gap-12 lg:gap-16">
+        <div className="grid-12 gap-8 lg:gap-16">
           <ScrollReveal className="col-span-12 lg:col-span-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-6">
               Frequently asked <span className="text-gradient-gold">questions.</span>
