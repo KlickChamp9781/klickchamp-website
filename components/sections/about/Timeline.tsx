@@ -14,7 +14,7 @@ const milestones = [
 
 export function Timeline() {
   return (
-    <section className="section-padding bg-card">
+    <section className="py-20 lg:py-30 bg-card">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">

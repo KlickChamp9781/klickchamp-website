@@ -9,7 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function IndustriesServed() {
   return (
-    <section className="section-padding">
+    <section className="py-20 lg:py-30">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">

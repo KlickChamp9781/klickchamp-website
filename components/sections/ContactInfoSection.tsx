@@ -35,7 +35,7 @@ export function ContactInfoSection() {
   const locationCount = LOCATIONS.length;
 
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Enquiry Types */}
@@ -126,7 +126,7 @@ export function ContactInfoSection() {
 
         {/* Service Areas */}
         <ScrollReveal className="mt-16">
-          <div className="border border-border p-8">
+          <div className="border border-border p-6 sm:p-8">
             <h2 className="text-xl font-bold mb-2">Service Areas</h2>
             <p className="text-sm text-muted-foreground mb-6 max-w-xl">
               We serve businesses across {locationCount} locations throughout Kolkata and surrounding areas, spanning {industryCount} industries.

@@ -19,7 +19,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function IndustriesList() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
           {INDUSTRIES.map((industry) => {
@@ -28,7 +28,7 @@ export function IndustriesList() {
               <motion.div key={industry.slug} variants={staggerItemVariants}>
                 <Link
                   href={`/industries/${industry.slug}`}
-                  className="group block bg-background p-8 hover:bg-card transition-colors"
+                  className="group block bg-background p-6 sm:p-8 hover:bg-card transition-colors"
                 >
                   <Icon className="h-8 w-8 text-primary mb-4" />
                   <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">

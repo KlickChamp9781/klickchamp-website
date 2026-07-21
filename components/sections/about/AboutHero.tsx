@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function AboutHero() {
   return (
-    <section className="relative pt-40 pb-20 bg-background">
+    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-background">
       <div className="container-main">
         <div className="grid-12">
           <div className="col-span-12 lg:col-span-10">

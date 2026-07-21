@@ -19,14 +19,14 @@ const items = [
 
 export function MissionVision() {
   return (
-    <section className="section-padding bg-secondary text-secondary-foreground border-y border-border">
+    <section className="py-20 lg:py-30 bg-secondary text-secondary-foreground border-y border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[rgb(var(--border))]/20">
           {items.map((item) => (
             <motion.div
               key={item.label}
               variants={staggerItemVariants}
-              className="bg-secondary p-8 md:p-12"
+              className="bg-secondary p-6 sm:p-8 md:p-12"
             >
               <span className="text-xs uppercase tracking-[0.2em] text-primary font-semibold">
                 {item.label}

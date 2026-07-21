@@ -11,7 +11,7 @@ import { resolveImage } from "@/lib/data/image-utils";
 
 export function CaseStudiesList() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {CASE_STUDIES.map((cs) => {
@@ -37,7 +37,7 @@ export function CaseStudiesList() {
                       <Badge>{cs.industry}</Badge>
                     </div>
                   </div>
-                  <div className="p-8">
+                  <div className="p-6 sm:p-8">
                     <div className="flex items-start justify-between">
                       <div>
                         <h2 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{cs.title}</h2>

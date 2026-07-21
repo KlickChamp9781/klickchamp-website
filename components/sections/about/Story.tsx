@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 export function Story() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <div className="grid-12 gap-12 lg:gap-16">
           <ScrollReveal className="col-span-12 lg:col-span-5">

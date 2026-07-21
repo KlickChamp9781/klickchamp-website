@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export function TeamGrid() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <h2 className="sr-only">Meet Our Team</h2>
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
@@ -21,7 +21,7 @@ export function TeamGrid() {
                 <Image src={member.image} alt={member.name} fill className="object-cover" unoptimized />
                 <div className="absolute inset-0 bg-[rgb(var(--secondary))]/60" />
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
                   {member.name}
                 </h3>

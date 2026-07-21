@@ -15,14 +15,14 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function ServicesList() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {SERVICE_CATEGORIES.map((service) => {
             const Icon = iconMap[service.icon] || Search;
             return (
               <motion.div key={service.slug} variants={staggerItemVariants}>
-                <Link href={`/services/${service.slug}`} className="group block bg-background p-8 md:p-12 min-h-[300px] flex flex-col justify-between hover:bg-card transition-colors">
+                <Link href={`/services/${service.slug}`} className="group block bg-background p-6 sm:p-8 md:p-12 min-h-[250px] md:min-h-[300px] flex flex-col justify-between hover:bg-card transition-colors">
                   <div>
                     <div className="w-12 h-12 border border-border flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
                       <Icon className="h-5 w-5 text-primary" />

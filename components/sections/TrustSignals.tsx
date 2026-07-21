@@ -7,7 +7,7 @@ export function TrustSignals() {
   const industryCount = INDUSTRIES.length;
 
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-12">

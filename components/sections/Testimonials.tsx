@@ -31,7 +31,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="section-padding bg-card">
+    <section className="py-20 lg:py-30 bg-card">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -49,7 +49,7 @@ export function Testimonials() {
             <motion.div
               key={testimonial.name}
               variants={staggerItemVariants}
-              className="bg-background p-8 flex flex-col"
+              className="bg-background p-6 sm:p-8 flex flex-col"
             >
               <Quote className="h-8 w-8 text-[rgb(var(--primary))]/20 mb-6" />
               <p className="text-foreground leading-relaxed mb-8 flex-1">

@@ -51,14 +51,14 @@ const testimonials = [
 
 export function TestimonialsGrid() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
           {testimonials.map((testimonial) => (
             <motion.div
               key={testimonial.name}
               variants={staggerItemVariants}
-              className="bg-background p-8 flex flex-col group"
+              className="bg-background p-6 sm:p-8 flex flex-col group"
             >
               <Quote className="h-8 w-8 text-[rgb(var(--primary))]/20 mb-6" />
               <p className="text-foreground leading-relaxed mb-8 flex-1">

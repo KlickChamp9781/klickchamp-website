@@ -14,7 +14,7 @@ export function SubServiceGrid({ heading, headingGold, items, theme = "default" 
             <Link
               key={item.href}
               href={item.href}
-              className="block bg-[#F1EBDE] p-8"
+              className="block bg-[#F1EBDE] p-6 sm:p-8"
             >
               <h3 className="text-lg font-bold mb-2 text-foreground">
                 {item.title}

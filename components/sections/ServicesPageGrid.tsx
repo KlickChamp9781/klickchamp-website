@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function ServicesPageGrid() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {SERVICE_CATEGORIES.map((service) => {
@@ -30,7 +30,7 @@ export function ServicesPageGrid() {
               <motion.div key={service.id} variants={staggerItemVariants}>
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group block bg-background p-8 md:p-12 min-h-[400px] flex flex-col justify-between transition-colors hover:bg-card"
+                  className="group block bg-background p-6 sm:p-8 md:p-12 min-h-[300px] md:min-h-[400px] flex flex-col justify-between transition-colors hover:bg-card"
                 >
                   <div>
                     <div className="flex items-start justify-between mb-8">

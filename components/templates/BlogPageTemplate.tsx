@@ -52,7 +52,7 @@ export function BlogPageTemplate({ post }: BlogPageTemplateProps) {
         { label: post.title, href: `/blog/${post.slug}` },
       ]} />
       <main>
-        <article className="pt-40 pb-20">
+        <article className="pt-32 pb-16 lg:pt-40 lg:pb-20">
           {/* Hero section */}
           {heroSection && (
             <div className="blog-hero-wrapper">

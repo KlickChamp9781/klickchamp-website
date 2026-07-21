@@ -10,7 +10,7 @@ export function ProcessSteps({ heading, headingGold, steps }: ProcessSection) {
         <Heading gold={headingGold}>{heading}</Heading>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
           {steps.map((step) => (
-            <div key={step.step} className="group bg-[#F1EBDE] p-8 transition-all duration-200 hover:-translate-y-0.5 hover:bg-foreground hover:ring-1 hover:ring-primary hover:shadow-sm">
+            <div key={step.step} className="group bg-[#F1EBDE] p-6 sm:p-8 transition-all duration-200 hover:-translate-y-0.5 hover:bg-foreground hover:ring-1 hover:ring-primary hover:shadow-sm">
               <div className="text-4xl font-bold text-foreground/15 group-hover:text-primary mb-4">
                 {String(step.step).padStart(2, "0")}
               </div>

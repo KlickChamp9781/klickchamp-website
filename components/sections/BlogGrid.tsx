@@ -21,7 +21,7 @@ const posts = BLOG_POSTS.map((p) => ({
 
 export function BlogGrid() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
           {posts.map((post) => (
@@ -44,7 +44,7 @@ export function BlogGrid() {
                     </span>
                   </div>
                 </div>
-                <div className="p-8 flex flex-col flex-1">
+                <div className="p-6 sm:p-8 flex flex-col flex-1">
                   <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
                     <span>{post.date}</span>
                     <span className="flex items-center gap-1">

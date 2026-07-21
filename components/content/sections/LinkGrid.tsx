@@ -29,7 +29,7 @@ export function LinkGrid({ heading, headingGold, items, columns = 3, theme = "de
                   />
                 </div>
               ) : null}
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <h3 className="font-bold group-hover:text-primary transition-colors mb-2">
                   {item.title}
                 </h3>

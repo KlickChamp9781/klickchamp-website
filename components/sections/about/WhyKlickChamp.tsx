@@ -14,7 +14,7 @@ const pillars = [
 
 export function WhyKlickChamp() {
   return (
-    <section className="section-padding">
+    <section className="py-20 lg:py-30">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -31,7 +31,7 @@ export function WhyKlickChamp() {
               <motion.div
                 key={pillar.title}
                 variants={staggerItemVariants}
-                className="bg-background p-8 text-center group"
+                className="bg-background p-6 sm:p-8 text-center group"
               >
                 <div className="w-14 h-14 border border-border flex items-center justify-center mx-auto mb-6 group-hover:border-primary group-hover:bg-[rgb(var(--primary))]/5 transition-all">
                   <Icon className="h-6 w-6 text-primary" />

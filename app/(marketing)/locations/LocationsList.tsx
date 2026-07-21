@@ -67,7 +67,7 @@ function LocalCard({ slug }: { slug: string }) {
 
 export function LocationsList() {
   return (
-    <section className="section-padding border-t border-border">
+    <section className="py-20 lg:py-30 border-t border-border">
       <div className="container-main">
         {/* Primary Service Locations */}
         <div className="mb-16">

@@ -30,7 +30,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="section-padding bg-card">
+    <section className="py-20 lg:py-30 bg-card">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -50,7 +50,7 @@ export function Process() {
               <motion.div
                 key={step.title}
                 variants={staggerItemVariants}
-                className="bg-card p-8 group"
+                className="bg-card p-6 sm:p-8 group"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 border border-border flex items-center justify-center group-hover:border-primary group-hover:bg-[rgb(var(--primary))]/5 transition-all">

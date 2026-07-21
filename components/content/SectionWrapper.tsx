@@ -25,7 +25,7 @@ export function SectionWrapper({
   className = "",
   padding = "section",
 }: SectionWrapperProps) {
-  const paddingClass = padding === "section" ? "section-padding" : padding === "compact" ? "py-12" : "";
+  const paddingClass = padding === "section" ? "py-20 lg:py-30" : padding === "compact" ? "py-12" : "";
   const borderClass = bordered ? "border-t border-border" : "";
   const bgClass = bgMap[theme];
 
