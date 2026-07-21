@@ -34,7 +34,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="section-padding bg-secondary text-secondary-foreground">
+    <section className="py-20 lg:py-30 bg-secondary text-secondary-foreground">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -54,7 +54,7 @@ export function Process() {
               <motion.div
                 key={step.number}
                 variants={staggerItemVariants}
-                className="bg-secondary p-8 md:p-10 group"
+                className="bg-secondary p-6 sm:p-8 md:p-10 group"
               >
                 <div className="text-6xl font-bold text-[rgb(var(--primary))]/10 mb-6">
                   {step.number}

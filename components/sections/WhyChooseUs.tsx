@@ -30,7 +30,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="section-padding">
+    <section className="py-20 lg:py-30">
       <div className="container-main">
         <div className="grid-12 gap-12 lg:gap-16">
           <ScrollReveal className="col-span-12 lg:col-span-5">
@@ -51,7 +51,7 @@ export function WhyChooseUs() {
                 <motion.div
                   key={reason.title}
                   variants={staggerItemVariants}
-                  className="bg-background p-8 group"
+                  className="bg-background p-6 sm:p-8 group"
                 >
                   <div className="w-12 h-12 border border-border flex items-center justify-center mb-6 group-hover:border-primary group-hover:bg-[rgb(var(--primary))]/5 transition-all">
                     <Icon className="h-5 w-5 text-primary" />

@@ -8,7 +8,7 @@ import { PHONE, WHATSAPP } from "@/lib/constants";
 
 export function ContactCTA() {
   return (
-    <section className="section-padding bg-secondary text-secondary-foreground">
+    <section className="py-20 lg:py-30 bg-secondary text-secondary-foreground">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto">

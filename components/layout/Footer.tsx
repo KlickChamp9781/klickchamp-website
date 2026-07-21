@@ -13,10 +13,10 @@ export function Footer() {
   return (
     <footer className="border-t border-border relative overflow-hidden bg-[rgb(var(--secondary))] text-[#EDE8DA]">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgb(var(--primary))/4] to-[rgb(var(--primary))/8] pointer-events-none" />
-      <div className="container-main section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 lg:gap-8">
+      <div className="container-main py-20 lg:py-30">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-10 lg:gap-8">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-2">
+          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-2">
             <Link href="/" aria-label="Go to Homepage" className="block mb-6">
               <Image
                 src="/images/footer logo.png"

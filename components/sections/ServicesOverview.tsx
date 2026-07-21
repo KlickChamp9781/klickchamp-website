@@ -38,7 +38,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function ServicesOverview() {
   return (
-    <section className="section-padding">
+    <section className="py-20 lg:py-30">
       <div className="container-main">
         <ScrollReveal>
           <div className="grid-12 mb-16">
@@ -69,7 +69,7 @@ export function ServicesOverview() {
               >
                 <Link
                   href={`/services/${service.slug}`}
-                  className="group block bg-background p-8 md:p-12 transition-colors hover:bg-card"
+                  className="group block bg-background p-6 sm:p-8 md:p-12 transition-colors hover:bg-card"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-14 h-14 border border-border flex items-center justify-center group-hover:border-primary group-hover:bg-[rgb(var(--primary))]/5 transition-all">

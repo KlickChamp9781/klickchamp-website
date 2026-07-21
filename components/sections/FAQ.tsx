@@ -6,7 +6,7 @@ import { HOME_FAQS } from "@/lib/data/home-faqs";
 
 export function FAQ() {
   return (
-    <section className="section-padding bg-card">
+    <section className="py-20 lg:py-30 bg-card">
       <div className="container-main">
         <div className="grid-12 gap-12 lg:gap-16">
           <ScrollReveal className="col-span-12 lg:col-span-4">

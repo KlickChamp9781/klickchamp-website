@@ -59,7 +59,7 @@ export function ContactFormSection() {
   };
 
   return (
-    <section className="section-padding" id="contact">
+    <section className="py-20 lg:py-30" id="contact">
       <div className="container-main">
         <div className="grid-12 gap-12 lg:gap-16">
           <ScrollReveal className="col-span-12 lg:col-span-5">

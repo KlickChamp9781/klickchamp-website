@@ -9,7 +9,7 @@ import { SITE_NAME } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-28 overflow-hidden bg-background">
+    <section className="relative pt-32 pb-16 lg:pt-44 lg:pb-28 lg:overflow-hidden bg-background">
       {/* Grid overlay */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="container-main h-full">

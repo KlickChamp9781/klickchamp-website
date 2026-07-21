@@ -9,7 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function Industries() {
   return (
-    <section className="section-padding">
+    <section className="py-20 lg:py-30">
       <div className="container-main">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -31,7 +31,7 @@ export function Industries() {
             >
               <Link
                 href={`/industries/${industry.slug}`}
-                className="flex items-center justify-between bg-background p-8 group hover:bg-card transition-colors"
+                className="flex items-center justify-between bg-background p-4 sm:p-6 md:p-8 group hover:bg-card transition-colors"
               >
                 <span className="text-lg font-medium group-hover:text-primary transition-colors">
                   {industry.title}

@@ -16,7 +16,7 @@ const posts = BLOG_POSTS.slice(0, 3).map((p) => ({
 
 export function BlogPreview() {
   return (
-    <section className="section-padding">
+    <section className="py-20 lg:py-30">
       <div className="container-main">
         <ScrollReveal>
           <div className="flex items-end justify-between mb-16">
@@ -56,7 +56,7 @@ export function BlogPreview() {
                     </span>
                   </div>
                 </div>
-                <div className="p-8">
+                <div className="p-6 sm:p-8">
                   <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
                     <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
                     <span className="flex items-center gap-1">
