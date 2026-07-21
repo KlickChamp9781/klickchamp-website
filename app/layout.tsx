@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 import { organizationJsonLd, webSiteJsonLd, localBusinessJsonLd } from "@/lib/seo/jsonld";
-import { Analytics } from "@/components/Analytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { inter } from "@/lib/fonts";
 import "./globals.css";
 
@@ -77,6 +77,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+  },
 };
 
 export const viewport: Viewport = {
@@ -118,7 +121,9 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
-        <Analytics />
+        {process.env.NODE_ENV === "production" && process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
       </body>
     </html>
   );
