@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ChatbotWidget } from "@/components/ui/ChatbotWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://klickchamp.com"),
@@ -86,6 +87,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ChatbotWidget />
         <WhatsAppButton />
       </body>
     </html>

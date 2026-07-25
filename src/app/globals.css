@@ -94,6 +94,22 @@ body { font-family: var(--kc-font-body); font-size: var(--kc-text-body); color: 
   0%, 100% { opacity: 0.3; }
   50% { opacity: 0.6; }
 }
+
+@keyframes chatbot-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3), 0 0 40px rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.5), 0 0 60px rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.5);
+  }
+}
+
+.chatbot-glow-ring {
+  animation: chatbot-glow-pulse 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

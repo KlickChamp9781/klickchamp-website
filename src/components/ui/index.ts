@@ -10,4 +10,5 @@ export { BlogCard } from "./BlogCard";
 export { FAQ } from "./FAQ";
 export { Process } from "./Process";
 export { WhatsAppButton } from "./WhatsAppButton";
+export { ChatbotWidget } from "./ChatbotWidget";
 export { Breadcrumb } from "./Breadcrumb";
